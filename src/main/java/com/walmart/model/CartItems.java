@@ -20,7 +20,7 @@ public class CartItems {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
-	private String id;
+	private long id;
 	
 	@Column(name="item_total")
 	private double itemTotal;
@@ -47,16 +47,16 @@ public class CartItems {
 	//constructors for the Class: CartItems
 	public CartItems(){}
 	
-	public CartItems(String itemId, double total, int qty, Cart c){
+	public CartItems(long itemId, double total, int qty, Cart c){
 		this.id=itemId;
 		this.itemTotal=total;
 		this.quantity=qty;
 		this.cart1=c;
 	}
-	public String getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public double getItemTotal() {

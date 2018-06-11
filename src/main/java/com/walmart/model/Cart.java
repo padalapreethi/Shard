@@ -35,7 +35,7 @@ public class Cart {
 	private String name;
 	
 	@ManyToOne
-	@JoinColumn(name="account_id", nullable=false)
+	@JoinColumn(name="account_id")
 	private Account account1;
 	
 	@OneToMany(mappedBy="cart1")

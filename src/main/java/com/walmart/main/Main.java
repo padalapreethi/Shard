@@ -25,8 +25,8 @@ public class Main {
 		Cart cart = new Cart();
 		cart.setName("MyCart1");
 		
-		CartItems item1 = new CartItems("Ino10", 10, 1, cart);
-		CartItems item2 = new CartItems("Ino20", 20, 2, cart);
+		CartItems item1 = new CartItems(10, 10, 1, cart);
+		CartItems item2 = new CartItems(11, 20, 2, cart);
 		Set<CartItems> itemsSet = new HashSet<CartItems>();
 		itemsSet.add(item1); itemsSet.add(item2);
 		
