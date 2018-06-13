@@ -15,13 +15,14 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import com.walmart.model.Account;
 import com.walmart.model.Cart;
 import com.walmart.model.CartItems;
 import com.walmart.lib.HibernateUtil;
 
 public class Main {
 	public static void main(String[] args) {
-
+		Account account=new Account("Preethi","padalapreethi.nit@gmail.com","Helloworld123","ID1");
 		Cart cart = new Cart();
 		cart.setName("MyCart1");
 		

@@ -4,6 +4,7 @@
 package com.walmart.lib;
 
 
+import org.hibernate.HibernateException;
 /**
  * @author p0p00bj
  *
@@ -27,15 +28,17 @@ public class HibernateUtil {
         	ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
         	System.out.println("Hibernate serviceRegistry created");
         	
-        	SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+        	SessionFactory sessionFactory = configuration.buildSessionFactory();
+        	System.out.println("Done");
         	
             return sessionFactory;
         }
-        catch (Throwable ex) {
-            System.err.println("Initial SessionFactory creation failed." + ex);
-            ex.printStackTrace();
-            throw new ExceptionInInitializerError(ex);
-        }
+        catch(HibernateException exception){
+            System.out.println("Problem creating session factory");
+            exception.printStackTrace();
+            throw new ExceptionInInitializerError(exception);
+       }
+    
     }
 	
 	public static SessionFactory getSessionFactory() {
