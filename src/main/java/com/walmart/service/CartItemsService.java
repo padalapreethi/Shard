@@ -49,9 +49,9 @@ public class CartItemsService {
 
 	public List<CartItems> findAll() {
 		CartItemsDao.openCurrentSession();
-		List<CartItems> books = CartItemsDao.findAll();
+		List<CartItems> cartitems = CartItemsDao.findAll();
 		CartItemsDao.closeCurrentSession();
-		return books;
+		return cartitems;
 	}
 
 	public void deleteAll() {
@@ -60,7 +60,7 @@ public class CartItemsService {
 		CartItemsDao.closeCurrentSessionwithTransaction();
 	}
 
-	public CartItemsDao bookDao() {
+	public CartItemsDao CartItemsDao() {
 		return CartItemsDao;
 	}
 

@@ -34,23 +34,23 @@ public class AccountService {
 
 	public Account findById(String id) {
 		AccountDao.openCurrentSession();
-		Account book = AccountDao.findById(id);
+		Account account = AccountDao.findById(id);
 		AccountDao.closeCurrentSession();
-		return book;
+		return account;
 	}
 
 	public void delete(String id) {
 		AccountDao.openCurrentSessionwithTransaction();
-		Account book = AccountDao.findById(id);
-		AccountDao.delete(book);
+		Account account = AccountDao.findById(id);
+		AccountDao.delete(account);
 		AccountDao.closeCurrentSessionwithTransaction();
 	}
 
 	public List<Account> findAll() {
 		AccountDao.openCurrentSession();
-		List<Account> books = AccountDao.findAll();
+		List<Account> accounts = AccountDao.findAll();
 		AccountDao.closeCurrentSession();
-		return books;
+		return accounts;
 	}
 
 	public void deleteAll() {

@@ -33,16 +33,16 @@ public class CartService {
 
 	public void delete(String id) {
 		CartDao.openCurrentSessionwithTransaction();
-		Cart book = CartDao.findById(id);
-		CartDao.delete(book);
+		Cart cart = CartDao.findById(id);
+		CartDao.delete(cart);
 		CartDao.closeCurrentSessionwithTransaction();
 	}
 
 	public List<Cart> findAll() {
 		CartDao.openCurrentSession();
-		List<Cart> books = CartDao.findAll();
+		List<Cart> carts = CartDao.findAll();
 		CartDao.closeCurrentSession();
-		return books;
+		return carts;
 	}
 
 	public void deleteAll() {

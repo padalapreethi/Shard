@@ -89,7 +89,7 @@ public class CartItemsDao implements CartItemsDaoInterface<CartItems, String>{
 
 	@SuppressWarnings("unchecked")
 	public List<CartItems> findAll() {
-		List<CartItems> books = (List<CartItems>) getCurrentSession().createQuery("from Cart_Items").list();
+		List<CartItems> books = (List<CartItems>) getCurrentSession().createQuery("from CART_ITEMS").list();
 		return books;
 	}
 

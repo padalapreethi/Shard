@@ -14,12 +14,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-
 import com.walmart.model.Account;
 
 public class AccountDao implements AccountDaoInterface<Account, String>{
 	private Session currentSession;
-	
 	private Transaction currentTransaction;
 
 	public AccountDao() {
@@ -77,8 +75,8 @@ public class AccountDao implements AccountDaoInterface<Account, String>{
 		getCurrentSession().update(entity);
 	}
 
-	public Account findById(String id) {
-		Account book = (Account) getCurrentSession().get(Account.class, id);
+	public Account findById(String i) {
+		Account book = (Account) getCurrentSession().get(Account.class, i);
 		return book; 
 	}
 
@@ -88,7 +86,7 @@ public class AccountDao implements AccountDaoInterface<Account, String>{
 
 	@SuppressWarnings("unchecked")
 	public List<Account> findAll() {
-		List<Account> books = (List<Account>) getCurrentSession().createQuery("from Account").list();
+		List<Account> books = (List<Account>) getCurrentSession().createQuery("from ACCOUNT").list();
 		return books;
 	}
 

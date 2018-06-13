@@ -60,6 +60,7 @@ public class Main {
 			if(!sessionFactory.isClosed()){
 				System.out.println("Closing SessionFactory");
 				sessionFactory.close();
+
 			}
 		}
 	}
