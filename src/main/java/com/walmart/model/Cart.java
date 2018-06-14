@@ -41,6 +41,16 @@ public class Cart {
 	@OneToMany(mappedBy="cart1")
 	private Set<CartItems> items;
 	
+	public Cart() {
+		
+	}
+	
+	public Cart(long id, double total, String name2) {
+		this.id=id;
+		this.total=total;
+		this.name=name2;
+	}
+	
 	public long getId() {
 		return id;
 	}

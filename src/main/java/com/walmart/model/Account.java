@@ -58,6 +58,12 @@ public class Account {
 	public String getAccountPassword() {
 		return password;
 	}
+	public Set<Cart> getCarts() {
+		return cart;
+	}
+	public void setCarts(Set<Cart> cart) {
+		this.cart = cart;
+	}
 	public void setAccountPassword(String account_password) {
 		this.password= account_password;
 	}
