@@ -22,7 +22,6 @@ import com.walmart.lib.HibernateUtil;
 
 public class Main {
 	public static void main(String[] args) {
-		Account account=new Account("Preethi","padalapreethi.nit@gmail.com","Helloworld123","ID1");
 		Cart cart = new Cart();
 		cart.setName("MyCart1");
 		
@@ -67,3 +66,4 @@ public class Main {
 	}
 
 }
+

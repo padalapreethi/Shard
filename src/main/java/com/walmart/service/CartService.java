@@ -24,14 +24,14 @@ public class CartService {
 		CartDao.closeCurrentSessionwithTransaction();
 	}
 
-	public Cart findById(String id) {
+	public Cart findById(long id) {
 		CartDao.openCurrentSession();
 		Cart cart = CartDao.findById(id);
 		CartDao.closeCurrentSession();
 		return cart;
 	}
 
-	public void delete(String id) {
+	public void delete(long id) {
 		CartDao.openCurrentSessionwithTransaction();
 		Cart cart = CartDao.findById(id);
 		CartDao.delete(cart);

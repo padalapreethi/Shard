@@ -75,8 +75,8 @@ public class AccountDao implements AccountDaoInterface<Account, String>{
 		getCurrentSession().update(entity);
 	}
 
-	public Account findById(String i) {
-		Account book = (Account) getCurrentSession().get(Account.class, i);
+	public Account findById(long id) {
+		Account book = (Account) getCurrentSession().get(Account.class, id);
 		return book; 
 	}
 

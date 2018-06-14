@@ -19,11 +19,11 @@ public class MainHibernate {
 	
 	public static void main(String[] args) {
 		AccountService accountservice=new AccountService();
-		Account account1=new Account("Preethi","padalapreethi.nit@gmail.com","Helloworld123","ID1");
-		Account account2=new Account("Pushkal","puushkall@gmail.com","Hihello","ID2");
-		Account account3=new Account("Tushaar","tushaargvsg45@gmail.com","12233helllo","ID3");
-		Account account4=new Account("Navya","navya@gmail.com","Hhmmokk","ID4");
-		Account account5=new Account("Prasad","prasadreddy@gmail.com","haaok","ID5");
+		Account account1=new Account("Preethi","padalapreethi.nit@gmail.com","Helloworld123",1);
+		Account account2=new Account("Pushkal","puushkall@gmail.com","Hihello",2);
+		Account account3=new Account("Tushaar","tushaargvsg45@gmail.com","12233helllo",3);
+		Account account4=new Account("Navya","navya@gmail.com","Hhmmokk",4);
+		Account account5=new Account("Prasad","prasadreddy@gmail.com","haaok",5);
 		
 		System.out.println("=========== Persist - start ============");
 		accountservice.persist(account1);
@@ -43,12 +43,12 @@ public class MainHibernate {
 		System.out.println("Book Updated is =>" +accountservice.findById(account1.getAccountID()).toString());
 		System.out.println("===========Update - end ===========");
 		System.out.println("===========Find - start ===========");
-		String id1 = account1.getAccountID();
+		long id1 = account1.getAccountID();
 		Account another = accountservice.findById(id1);
 		System.out.println("Book found with id " + id1 + " is =>" + another.toString());
 		System.out.println("===========Find - end===========");
 		System.out.println("=========== Delete - start ===========");
-		String id3 = account3.getAccountID();
+		long id3 = account3.getAccountID();
 		accountservice.delete(id3);
 		System.out.println("Deleted book with id " + id3 + ".");
 		System.out.println("Now all books are " + accountservice.findAll().size() + ".");

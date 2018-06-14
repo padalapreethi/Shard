@@ -32,14 +32,14 @@ public class AccountService {
 		AccountDao.closeCurrentSessionwithTransaction();
 	}
 
-	public Account findById(String id) {
+	public Account findById(long id) {
 		AccountDao.openCurrentSession();
 		Account account = AccountDao.findById(id);
 		AccountDao.closeCurrentSession();
 		return account;
 	}
 
-	public void delete(String id) {
+	public void delete(long id) {
 		AccountDao.openCurrentSessionwithTransaction();
 		Account account = AccountDao.findById(id);
 		AccountDao.delete(account);

@@ -33,14 +33,14 @@ public class CartItemsService {
 		CartItemsDao.closeCurrentSessionwithTransaction();
 	}
 
-	public CartItems findById(String id) {
+	public CartItems findById(long id) {
 		CartItemsDao.openCurrentSession();
 		CartItems cartitems = CartItemsDao.findById(id);
 		CartItemsDao.closeCurrentSession();
 		return cartitems;
 	}
 
-	public void delete(String id) {
+	public void delete(long id) {
 		CartItemsDao.openCurrentSessionwithTransaction();
 		CartItems cartitems = CartItemsDao.findById(id);
 		CartItemsDao.delete(cartitems);

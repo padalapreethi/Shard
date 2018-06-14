@@ -77,7 +77,7 @@ public class CartDao implements CartDaoInterface<Cart, String>{
 		getCurrentSession().update(entity);
 	}
 
-	public Cart findById(String id) {
+	public Cart findById(long id) {
 		Cart book = (Cart) getCurrentSession().get(Cart.class, id);
 		return book; 
 	}

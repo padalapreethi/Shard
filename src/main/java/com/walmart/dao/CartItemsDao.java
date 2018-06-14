@@ -78,7 +78,7 @@ public class CartItemsDao implements CartItemsDaoInterface<CartItems, String>{
 		getCurrentSession().update(entity);
 	}
 
-	public CartItems findById(String id) {
+	public CartItems findById(long id) {
 		CartItems book = (CartItems) getCurrentSession().get(CartItems.class, id);
 		return book; 
 	}

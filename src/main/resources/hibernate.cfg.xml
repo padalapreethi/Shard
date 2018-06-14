@@ -26,6 +26,7 @@
    
         <!-- Names the annotated entity class -->  
         <mapping class="com.walmart.model.Cart"/>
+        
         <mapping class="com.walmart.model.CartItems"/>
         <mapping class="com.walmart.model.Account"/>
     </session-factory>

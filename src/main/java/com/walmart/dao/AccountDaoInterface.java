@@ -17,7 +17,7 @@ public interface AccountDaoInterface <T, Id extends Serializable> {
 	
 	public void update(T entity);
 	
-	public T findById(Id id);
+	public T findById(long id);
 	
 	public void delete(T entity);
 	

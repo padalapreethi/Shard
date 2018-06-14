@@ -21,7 +21,7 @@ public class Account {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="account_id")
-	private String account_id;
+	private long account_id;
 	
 	@Column(name="account_name")
 	private String name;
@@ -37,7 +37,7 @@ public class Account {
 	
 	public Account(){}
 	
-	public Account(String account_name, String account_email, String account_password, String account_id){
+	public Account(String account_name, String account_email, String account_password, long account_id){
 		this.name=account_name;
 		this.email=account_email;
 		this.password=account_password;
@@ -61,10 +61,10 @@ public class Account {
 	public void setAccountPassword(String account_password) {
 		this.password= account_password;
 	}
-	public String getAccountID() {
+	public long getAccountID() {
 		return account_id;
 	}
-	public void setAccountID(String id) {
+	public void setAccountID(long id) {
 		this.account_id = id;
 	}
 	
